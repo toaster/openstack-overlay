@@ -9,9 +9,7 @@
                 <email>cor@hyves.nl</email>
                 <name>Cor Cornelisse</name>
         </owner>
-        <source type="git">https://github.com/hyves-org/openstack-overlay.git</source>
-	<!--<source type="git">git://github.com/hyves-org/openstack-overlay.git</source>-->
-
-	<feed>https://github.com/hyves-org/openstack-overlay/commits/master.atom</feed>
+        <source type="git">https://github.com/toaster/openstack-overlay.git</source>
+        <feed>https://github.com/toaster/openstack-overlay/commits/master.atom</feed>
 </repo>
 </repositories>
