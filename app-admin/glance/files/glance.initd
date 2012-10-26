@@ -26,21 +26,21 @@ checkconfig() {
 start() {
 	checkconfig || return $?
 	. /etc/conf.d/$BASENAME
-	
+
 	ebegin "Starting ${SVCNAME}"
-	
-	start-stop-daemon --start --quiet --pidfile "${PID_PATH}/${SVCENAME}.pid" \
+
+	start-stop-daemon --start --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" \
 					  --exec /usr/bin/glance-control -- ${SERVERNAME} start
-	
+
 	eend $? "Failed to start ${SVCNAME}"
 }
 
 stop() {
 	checkconfig || return $?
 	. /etc/conf.d/$BASENAME
-	
+
 	ebegin "Stopping ${SVCNAME}"
-	
+
 	start-stop-daemon --stop --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" \
 					  --exec /usr/bin/glance-control -- ${SERVERNAME} stop
 	eend $? "Failed to stop ${SVCNAME}"

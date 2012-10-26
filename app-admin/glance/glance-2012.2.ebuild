@@ -23,13 +23,24 @@ IUSE=""
 DEPEND="dev-python/setuptools
 		!dev-python/python-glanceclient"
 RDEPEND="${DEPEND}
-		 dev-python/webob
+		 dev-python/anyjson
+		 dev-python/boto
+		 >=dev-python/eventlet-0.9.12
+		 >=dev-python/greenlet-0.3.1
 		 dev-python/httplib2
-		 dev-python/routes
+		 dev-python/iso8601
+		 dev-python/jsonschema
+		 dev-python/kombu
+		 dev-python/lxml
+		 dev-python/passlib
 		 dev-python/paste
 		 dev-python/pastedeploy
-		 dev-python/pyxattr
-		 dev-python/kombu"
+		 dev-python/pycrypto
+		 dev-python/routes
+		 >=dev-python/sqlalchemy-0.7
+		 >=dev-python/sqlalchemy-migrate-0.7
+		 dev-python/webob
+		 dev-python/wsgiref"
 
 src_install() {
 	distutils_src_install
