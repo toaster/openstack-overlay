@@ -14,7 +14,7 @@ API. It provides a Python API (the glanceclient module) and a command-line tool
 (glance). This library fully supports the v1 Images API, while support for the
 v2 API is in progress."
 HOMEPAGE="https://launchpad.net/python-glanceclient"
-SRC_URI="http://launchpad.net/python-glanceclient/trunk/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -24,8 +24,7 @@ IUSE=""
 DEPEND="dev-python/setuptools
         !app-admin/glance"
 RDEPEND="${DEPEND}
-         dev-python/argparse
-         dev-python/httplib2
-         dev-python/prettytable
-         dev-python/warlock"
-
+         =dev-python/prettytable-0.6*
+         =dev-python/warlock-0.1.0
+         =dev-python/python-keystoneclient-0.1*
+         !<dev-python/python-keystoneclient-0.1.2"
