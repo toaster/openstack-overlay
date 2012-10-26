@@ -21,7 +21,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-python/setuptools"
+DEPEND="dev-python/setuptools
+        !app-admin/glance"
 RDEPEND="${DEPEND}
          dev-python/argparse
          dev-python/httplib2

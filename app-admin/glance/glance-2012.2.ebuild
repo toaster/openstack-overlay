@@ -20,7 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-python/setuptools"
+DEPEND="dev-python/setuptools
+		!dev-python/python-glanceclient"
 RDEPEND="${DEPEND}
 		 dev-python/webob
 		 dev-python/httplib2
@@ -40,5 +41,5 @@ src_install() {
 	done
 
 	diropts -m 0750
-	dodir /var/run/glance /var/log/nova /var/lock/nova
+	dodir /var/run/glance /var/log/glance /var/lock/glance
 }
