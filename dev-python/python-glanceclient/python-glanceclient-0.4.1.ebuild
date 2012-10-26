@@ -26,5 +26,6 @@ DEPEND="dev-python/setuptools
 RDEPEND="${DEPEND}
          dev-python/argparse
          dev-python/httplib2
-         dev-python/prettytable"
+         dev-python/prettytable
+         dev-python/warlock"
 
