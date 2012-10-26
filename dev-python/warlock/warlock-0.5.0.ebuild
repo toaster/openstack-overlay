@@ -20,5 +20,5 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
-
+RDEPEND="${DEPEND}
+         =dev-python/jsonschema-0.2*"
