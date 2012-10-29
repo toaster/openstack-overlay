@@ -40,6 +40,7 @@ DEPEND="dev-python/setuptools
         dev-python/paramiko
         dev-python/feedparser"
 RDEPEND="${DEPEND}
+         app-emulation/libvirt[python,qemu]
          dev-python/m2crypto
          dev-python/python-glanceclient
          dev-python/python-novaclient
@@ -56,13 +57,13 @@ src_prepare() {
 
 src_install() {
     distutils_src_install
-    newconfd "${FILESDIR}/${P}" nova
-    newinitd "${FILESDIR}/nova.initd" nova
+    newconfd "${FILESDIR}/${P}.confd" nova
+    newinitd "${FILESDIR}/${P}.initd" nova
 
     for function in api cert compute consoleauth network objectstore scheduler volume xvpvncproxy; do
         dosym /etc/init.d/nova /etc/init.d/nova-${function}
     done
 
     diropts -m 0750
-    dodir /var/run/nova /var/log/openstack /var/lock/nova
+    dodir /var/run/nova /var/log/openstack /var/lock/nova /var/lib/nova/tmp /var/lib/nova/instances
 }
