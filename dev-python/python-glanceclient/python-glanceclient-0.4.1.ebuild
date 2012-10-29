@@ -21,8 +21,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-python/setuptools
-        !app-admin/glance"
+DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
          =dev-python/prettytable-0.6*
          =dev-python/warlock-0.1.0

@@ -20,8 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-python/setuptools
-		!dev-python/python-glanceclient"
+DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}
 		 dev-python/anyjson
 		 dev-python/boto
@@ -52,5 +51,8 @@ src_install() {
 	done
 
 	diropts -m 0750
-	dodir /var/run/glance /var/log/glance /var/lock/glance
+	dodir /var/run/glance /var/log/openstack /var/lock/glance
+
+	rm ${D}/usr/bin/glance
+	rm ${D}/usr/bin/glance-2.7
 }

@@ -45,5 +45,5 @@ src_install() {
 	newinitd "${FILESDIR}/keystone.initd" keystone
 
 	diropts -m 0750
-	dodir /var/run/keystone /var/log/keystone
+	dodir /var/run/keystone /var/log/openstack
 }

@@ -41,24 +41,24 @@ DEPEND="dev-python/setuptools
         dev-python/feedparser"
 RDEPEND="${DEPEND}
          dev-python/m2crypto
-         app-admin/glance
+         dev-python/python-glanceclient
          dev-python/python-novaclient
          dev-python/nova-adminclient
          dev-python/boto
          dev-python/prettytable
          dev-python/mysql-python
-		 dev-python/iso8601
+         dev-python/iso8601
          controller? ( net-misc/rabbitmq-server )"
 
 src_install() {
-	distutils_src_install
-	newconfd "${FILESDIR}/nova.confd" nova
-	newinitd "${FILESDIR}/nova.initd" nova
+    distutils_src_install
+    newconfd "${FILESDIR}/nova.confd" nova
+    newinitd "${FILESDIR}/nova.initd" nova
 
-	for function in api cert compute consoleauth network objectstore scheduler volume xvpvncproxy; do
-		dosym /etc/init.d/nova /etc/init.d/nova-${function}
-	done
+    for function in api cert compute consoleauth network objectstore scheduler volume xvpvncproxy; do
+        dosym /etc/init.d/nova /etc/init.d/nova-${function}
+    done
 
-	diropts -m 0750
-	dodir /var/run/nova /var/log/nova /var/lock/nova
+    diropts -m 0750
+    dodir /var/run/nova /var/log/openstack /var/lock/nova
 }
