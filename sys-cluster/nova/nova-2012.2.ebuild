@@ -56,7 +56,7 @@ src_prepare() {
 
 src_install() {
     distutils_src_install
-    newconfd "${FILESDIR}/nova.confd" nova
+    newconfd "${FILESDIR}/${P}" nova
     newinitd "${FILESDIR}/nova.initd" nova
 
     for function in api cert compute consoleauth network objectstore scheduler volume xvpvncproxy; do
