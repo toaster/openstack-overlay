@@ -1,0 +1,11 @@
+--- orig/nova/db/sqlalchemy/migrate_repo/versions/082_essex.py   2012-10-29 12:09:40.850983530 +0100
++++ new/nova/db/sqlalchemy/migrate_repo/versions/082_essex.py    2012-10-29 12:10:47.379784528 +0100
+@@ -277,7 +277,7 @@ def upgrade(migrate_engine):
+         Column('updated_at', DateTime),
+         Column('deleted_at', DateTime),
+         Column('deleted', Boolean),
+-        Column('domain', String(length=512), primary_key=True, nullable=False),
++        Column('domain', String(length=255), primary_key=True, nullable=False),
+         Column('scope', String(length=255)),
+         Column('availability_zone', String(length=255)),
+         Column('project_id', String(length=255), ForeignKey('projects.id')),

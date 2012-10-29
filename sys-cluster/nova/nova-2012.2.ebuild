@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Nova is a cloud computing fabric controller (the main part of an
 IaaS system). It is written in Python."
@@ -49,6 +49,10 @@ RDEPEND="${DEPEND}
          dev-python/mysql-python
          dev-python/iso8601
          controller? ( net-misc/rabbitmq-server )"
+
+src_prepare() {
+    epatch "${FILESDIR}/${P}-workaround-993663.patch"
+}
 
 src_install() {
     distutils_src_install
