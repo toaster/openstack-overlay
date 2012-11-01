@@ -48,10 +48,6 @@ DEPEND=">=dev-python/django-1.3.1
 
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	epatch ${FILESDIR}"/revert-bugfix-974916.patch"
-}
-
 src_install() {
 	distutils_src_install
 	dodoc ${FILESDIR}"/horizon_vhost.conf"
