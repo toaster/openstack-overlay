@@ -46,4 +46,5 @@ src_install() {
 
 	diropts -m 0750
 	dodir /var/run/keystone /var/log/openstack
+	keepdir /var/run/keystone
 }

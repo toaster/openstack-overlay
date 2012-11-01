@@ -40,7 +40,7 @@ DEPEND="dev-python/setuptools
         dev-python/paramiko
         dev-python/feedparser"
 RDEPEND="${DEPEND}
-         app-emulation/libvirt[python,qemu]
+         app-emulation/libvirt[python,qemu,virt-network]
          dev-python/m2crypto
          dev-python/python-glanceclient
          dev-python/python-novaclient
@@ -66,4 +66,5 @@ src_install() {
 
     diropts -m 0750
     dodir /var/run/nova /var/log/openstack /var/lock/nova /var/lib/nova/tmp /var/lib/nova/instances
+    keepdir /var/run/nova
 }
