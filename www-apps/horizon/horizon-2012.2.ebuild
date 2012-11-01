@@ -26,6 +26,8 @@ RDEPEND="${DEPEND}
 		dev-python/cherrypy
 		dev-python/coverage
 		>=dev-python/django-1.4
+		dev-python/django-compressor
+		dev-python/django-openstack-auth
 		dev-python/eventlet
 		dev-python/kombu
 		dev-python/mox
@@ -43,12 +45,14 @@ RDEPEND="${DEPEND}
 		dev-python/python-novaclient
 		dev-python/python-quantumclient
 		dev-python/python-swiftclient
+		dev-python/pytz
 		dev-python/pyxattr
 		dev-python/routes
 		dev-python/sphinx
 		dev-python/sqlalchemy
 		dev-python/sqlalchemy-migrate
 		dev-python/webob
+		net-libs/nodejs
 		www-apache/mod_wsgi
 		www-apps/noVNC"
 
