@@ -20,33 +20,37 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=">=dev-python/django-1.3.1
-	    dev-python/python-dateutil
-		dev-python/sphinx
+DEPEND="dev-python/setuptools"
+
+RDEPEND="${DEPEND}
 		dev-python/cherrypy
 		dev-python/coverage
-		dev-python/nose
-		dev-python/mox
-		dev-python/pep8
-		dev-python/pylint
-		dev-python/pastedeploy
+		>=dev-python/django-1.4
 		dev-python/eventlet
 		dev-python/kombu
+		dev-python/mox
+		dev-python/nose
+		dev-python/pastedeploy
+		dev-python/pep8
 		dev-python/pycrypto
+		dev-python/pylint
+		dev-python/python-cinderclient
+		dev-python/python-cloudfiles
+		dev-python/python-dateutil
+		dev-python/python-gflags
+		dev-python/python-glanceclient
+		dev-python/python-keystoneclient
+		dev-python/python-novaclient
+		dev-python/python-quantumclient
+		dev-python/python-swiftclient
+		dev-python/pyxattr
 		dev-python/routes
+		dev-python/sphinx
 		dev-python/sqlalchemy
 		dev-python/sqlalchemy-migrate
 		dev-python/webob
-		dev-python/pyxattr
-		dev-python/python-gflags
-		dev-python/python-keystoneclient
-		dev-python/python-novaclient
-		dev-python/python-cloudfiles
-		app-admin/glance
-		dev-python/setuptools
+		www-apache/mod_wsgi
 		www-apps/noVNC"
-
-RDEPEND="${DEPEND}"
 
 src_install() {
 	distutils_src_install
