@@ -1,0 +1,3 @@
+PID_PATH=/var/run/cinder
+TMP_PATH=/var/lib/cinder/tmp
+CONF_PATH=/etc/cinder/cinder.conf
